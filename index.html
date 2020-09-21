@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Southern University College Faculty of Engineering and Information Technology</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #00458a;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #00458a;
+    font-size: 50px;
+  }
+  .logo {
+    color: #00458a;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #00458a;
+  }
+  .carousel-indicators li {
+    border-color: #00458a;
+  }
+  .carousel-indicators li.active {
+    background-color: #00458a;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #00458a; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #00458a;
+    background-color: #fff !important;
+    color: #00458a;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #00458a !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #00458a;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #00458a;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #00458a !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #00458a;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+  .carousel img {
+    /*-webkit-filter: grayscale(90%);*/
+    /*filter: grayscale(90%);  make all photos black and white  */
+    width: 100%; /* Set width to 100% */
+    /*margin: auto;*/
+    margin-top:50px;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">FEIT</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#departments">DEPARTMENTS</a></li>
+        <li><a href="#members">MEMBERS</a></li>
+        <li><a href="#programmes">PROGRAMMES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="carousel">
+        <img src="media/img/congra.jpg" alt="title" class="img-fluid">
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Faculty</h2><br>
+      <h4>The faculty of Engineering and Information Technology (FEIT) is a faculty within the Southern University College (Southern UC). It was established on August 12, 2012 after Southern College (SC) was upgraded to Southern UC.</h4><br>
+      <p>The history reaches back to two decades ago, when the Department of Computer Science was first established in 1991, followed by the Department of Electrical and Electronics Engineering in 2004. These two departments were then integrated and renamed as the School of Engineering and Information Technology (SEIT) in March 2006.</p>
+    </div>
+    <div class="col-sm-4">
+      <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+      <img src="media/img/member.jpg" alt="about" class="img-fluid" style="width:100%;">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <!-- <span class="glyphicon glyphicon-globe logo slideanim"></span> -->
+      <img src="media/img/objectives.jpg" alt="about" class="img-fluid" style="width:100%;">
+    </div>
+    <div class="col-sm-8">
+      <h2>Objectives</h2><br>
+      <h4><strong>FEIT has set the following objectives in its establishment:</strong></h4><br>
+      <p><strong>1: </strong>To provide high-quality and all round education in engineering and information technology to produce competent engineers and IT professionals capable of dealing effectively with sophisticated engineering and IT problems.</p>
+      <p><strong>2: </strong>Increase activities to promote innovation, commercialization and entrepreneurship in the field of software and electronics engineering development.</p>
+      <p><strong>3: </strong>To help the country in achieving its goal as a developed country in 2020 in terms of the number of professionals in the fields of engineering and ICT.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (departments Section) -->
+<div id="departments" class="container-fluid text-center">
+  <h2>DEPARTMENTS</h2>
+  <h4>Our Departments</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+      <span class="fa fa-laptop logo-small"></span>
+      <h4>Computer Science</h4>
+      <p>Bachelor of Software Engineering (Hons),<br>Diploma in Information Technology,<br>Diploma in Computer Science</p>
+    </div>
+    <div class="col-sm-6">
+      <span class="fa fa-wrench logo-small"></span>
+      <h4>Electrical and Electronics Engineering</h4>
+      <p>Bachelor of Electronic Engineering with Honours,<br>Diploma in Electrical & Electronic Engineering</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (members Section) -->
+<div id="members" class="container-fluid text-center bg-grey">
+  <h2>Our Members</h2><br>
+  <h4>Faculty Dean & Departments Head</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <br>
+        <img src="media/img/sim.jpg" class="img-fluid" alt="Sim" style="width:50%;">
+        <p><strong>Assoc. Prof. Sim Hiew Moi</strong></p>
+        <p>Dean, Associate Professor, Department of Computer Science</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="media/img/so.jpg" class="img-fluid" alt="So" style="width:50%;">
+        <p><strong>Asst. Prof. So Yong Quay</strong></p>
+        <p>Head, Department of Computer Science; Assistant Professor</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="media/img/chan.jpg" class="img-fluid" alt="Chan" style="width:50%;">
+        <p><strong>Chan Bun Seng</strong></p>
+        <p>Head, Department of Electrical & Electronic Engineering; Lecturer</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Our lecturers' information</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Doctor of Philosophy (Computer Science), Iris and Face Biometrics (Image Processing), Universiti Teknologi Malaysia (UTM)"<br><span>Dean, Faculty of Engineering & Information Technology Dr. Sim Hiew Moi</span></h4>
+      </div>
+      <div class="item">
+        <h4>"MBA ,Management Information Systems, National Chengchi University, Taiwan"<br><span>Head, Department of Computer Science So Yong Quay</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Ph.D, 3D Computer Vision, Curtin University Malaysia"<br><span>Head, Department of Electrical & Electronic Engineering Chan Bun Seng</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (programmes Section) -->
+<div id="programmes" class="container-fluid">
+  <div class="text-center">
+    <h2>PROGRAMMES</h2>
+    <h4>What Programmes We Have?</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="text-center">Bachelor of Software Engineering (Hons)</h1>
+        </div>
+        <div class="panel-body">
+          <p class="text-center"><strong>Introduction</strong><br>
+          Software Engineering is the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software.</p>
+
+          <!-- <p><strong>Programme Objectives (POs)</strong><br>
+            <strong>PEO 1:</strong> To produce graduates who can utilize state-of-the-art knowledge, suitable methodologies and scientific approaches in requirements analysis, design, evaluation, implementation, maintenance and evolution of high quality software systems.<br>
+            <strong>PEO 2:</strong> To produce graduates who are capable of undertaking analysis, research and development in the field of software engineering and software-related technology.<br>
+            <strong>PEO 3:</strong> To produce graduates who are able to demonstrate consistent professional ethics with high integrity.</p> -->
+
+          <p class="text-center"><strong>Entry Requirements</strong></p><ul>
+            <li>Matriculation or foundation programmes: At least a CGPA of 2.0 and a credit in SPM Additional Mathematics</li>
+            <li>STPM: Full passes in 2 subjects with at least CGPAs of 2.0 and a credit in SPM Additional Mathematics</li>
+            <li>UEC: At least 5Bs include Additional Mathematics</li>
+            <li>A-level: At least 2Cs in 2 related subjects include SPM Additional Mathematics</li>
+            <li>Diploma in Computer Science/Information Technology/Technology System/Software Engineering or other equivalents with at least a CGPA of 2.5 and a credit in Additional Mathematics at SPM Level</li>
+            <li>Diploma in other fields: at least a CGPA of 2.5 and a credit in SPM Additional Mathematics</li>
+            <li>Candidates with CGPAs between 2.0 and 2.5 are subjected to internal assessment of Southern UC</li>
+            <li>Other recognized equivalent qualifications</li></ul>
+          <p class="text-center"><strong>Core Subjects</strong><br>
+          Java Programming I, Java Programming II, Discrete Mathematics, Quantitative Methods, Introduction to Information Technology, Data Structure and Algorithm, Database Systems, Information Security and Assurance, Software Engineering, Computer Organization and Architecture, Human Computer Interaction, Object-Oriented Programming, Software Testing, Introduction to Networks and Communication Systems, Operating System , Software Design, Software Evolution and Maintenance, Software Process, Social and Professional Issues, Project Management, Software Quality, Object-Oriented System Modelling and Analysis, Web Development, Final Year Project I, Final Year Project II, Industrial Training.</p>
+          <p class="text-center"><strong>Course Duration</strong><br>3 years full-time course (Total credits required: 123 credits)</p>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="text-center">Diploma in Information Technology</h1>
+        </div>
+        <div class="panel-body">
+          <p class="text-center"><strong>Introduction</strong><br>
+         Based on the information technology, business and industrial needs, the curriculums are designed to provide the student with the techniques and knowledge in the applications and process of Information technology, as well as to train the students to be excellent at data analysis and information management.</p>
+
+          <!-- <p><strong>Programme Objectives (POs)</strong><br>
+            <strong>PEO 1:</strong> To produce graduates who can utilize state-of-the-art knowledge, suitable methodologies and scientific approaches in requirements analysis, design, evaluation, implementation, maintenance and evolution of high quality software systems.<br>
+            <strong>PEO 2:</strong> To produce graduates who are capable of undertaking analysis, research and development in the field of software engineering and software-related technology.<br>
+            <strong>PEO 3:</strong> To produce graduates who are able to demonstrate consistent professional ethics with high integrity.</p> -->
+
+          <p class="text-center"><strong>Entry Requirements</strong></p><ul>
+            <li>SPM: 3 credits include Mathematics</li>
+            <li>STPM: full pass in 1 subject and a credit in SPM Mathematics</li>
+            <li>UEC: 3 credits include Mathematics</li></ul>
+          <p class="text-center"><strong>Core Subjects</strong><br>
+          Fundamentals of Software Design and Development, System Analysis and Design, Database System Design, Networking and Distributed System, Computer Organization and Architecture, Operating System, System Security and Control, Project I, Project II, Business Information System, Mathematics for Computing, Calculus and Algebra, Statistics and Probability, Internet Application, Introduction to Multimedia, Software Development, Object-oriented Programming, Data Structure and Algorithm, Project Management, Web-based Systems, Industrial Training.</p>
+          <p class="text-center"><strong>Course Duration</strong><br>2 years 4 months full-time course (Total credits required: 92 credits)</p>
+        </div>
+      </div>      
+    </div>  
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="text-center">Diploma in Computer Science</h1>
+        </div>
+        <div class="panel-body">
+          <p class="text-center"><strong>Introduction</strong><br>
+          This course has been designed in response to the needs of the rapid development of the country and to support the growth and success of the Multimedia Super Corridor project introduced by the government. The design of the course curriculums not only emphasizes on the academic theories and the practical applications, but it also takes into considerations of the career prospect and future development of the students.</p>
+
+          <!-- <p><strong>Programme Objectives (POs)</strong><br>
+            <strong>PEO 1:</strong> To produce graduates who can utilize state-of-the-art knowledge, suitable methodologies and scientific approaches in requirements analysis, design, evaluation, implementation, maintenance and evolution of high quality software systems.<br>
+            <strong>PEO 2:</strong> To produce graduates who are capable of undertaking analysis, research and development in the field of software engineering and software-related technology.<br>
+            <strong>PEO 3:</strong> To produce graduates who are able to demonstrate consistent professional ethics with high integrity.</p> -->
+
+          <p class="text-center"><strong>Entry Requirements</strong></p><ul>
+            <li>SPM: at least 3 credits include Mathematics</li>
+            <li>STPM: a full pass in one subject and a credit in SPM Mathematics</li>
+            <li>UEC: at least 3 credits include Mathematics</li></ul>
+          <p class="text-center"><strong>Core Subjects</strong><br>
+          Introduction to Programming, Discrete Mathematics, System Analysis and Design, Database System Design, Project, Computer Organization and Architecture, Operating System, Networking and Distributed System, Computer System, Mathematics for Computing, Calculus, Java Programming, Advanced Java Programming, Data Structure and Algorithm, Human Computer Interaction, Visual Basic.Net, Internet Application, Web-Based Systems, Industrial Training.</p>
+          <p class="text-center"><strong>Course Duration</strong><br>2 years 4 months full-time course (Total credits required: 92 credits)</p>
+        </div>
+      </div>      
+    </div>     
+  </div>
+
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="text-center">Bachelor of Electronic Engineering with Honours</h1>
+        </div>
+        <div class="panel-body">
+          <p class="text-center"><strong>Introduction</strong><br>
+          This course is designed for those who wish to broaden their knowledge in electronics engineering. It’s main objectives are to train students in the aspects of analysis and design, practical and project handling and problem solving skills. In doing so, we hope our graduates will be equipped with a solid foundation upon joining employment and with the necessary skills to meet the challenges in the fields of engineering today.</p>
+
+          <!-- <p><strong>Programme Objectives (POs)</strong><br>
+            <strong>PEO 1:</strong> To produce graduates who can utilize state-of-the-art knowledge, suitable methodologies and scientific approaches in requirements analysis, design, evaluation, implementation, maintenance and evolution of high quality software systems.<br>
+            <strong>PEO 2:</strong> To produce graduates who are capable of undertaking analysis, research and development in the field of software engineering and software-related technology.<br>
+            <strong>PEO 3:</strong> To produce graduates who are able to demonstrate consistent professional ethics with high integrity.</p> -->
+
+          <p class="text-center"><strong>Entry Requirements</strong></p><ul>
+            <li>STPM/ A Level: full passes in 2 subjects include Mathematics and Physics / Chemistry</li>
+            <li>UEC: at least 5 credits include Mathematics and Physics / Chemistry</li>
+            <li>Matriculation/ Pre-University that recognized by the MOE: at least a CGPA of 2.0</li>
+            <li>Foundation programs in relevant field from any HEPs recognized by MOE: at least CGPAs of 2.0</li>
+            <li>Other recognized equivalent qualifications</li>
+          </ul>
+          <p class="text-center"><strong>Core Subjects</strong><br>
+          Basic Control Theory, C++ Programming, Digital Electronics I, Digital Electronics II, Digital Image Processing, Digital Signal Processing, Electric Circuit I, Electric Circuit II, Electrical & Electronic Laboratory I, Electrical & Electronic Laboratory II, Electronic Circuit I, Electronic Circuit II, Electronic Instrumentation and Measurements, Embedded System Design, Engineering Economics, Engineering Electromagnetic, Engineering Statistics, Fundamentals of Telecommunication, Logic and System Design, Microcontrollers Microelectronics, Modern Control System, Power Electronics, Programmable Logic Controllers, Project & Practice I, Project & Practice II, VLSI System Design, Capstone Project</p>
+          <p class="text-center"><strong>Course Duration</strong><br>4 years full-time course (Total credits required: 139 credits)</p>
+        </div>
+      </div>      
+    </div>   
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="text-center">Diploma in Electrical & Electronic Engineering</h1>
+        </div>
+        <div class="panel-body">
+          <p class="text-center"><strong>Introduction</strong><br>
+          The diploma in Electrical and Electronics Engineering course covers a wide range of electrical and electronics engineering basic knowledge. It is to ensure that graduates have mastered the necessary skills required, knowledge and professionalism to meet the challenges in the broader electrical and electronic engineering industry. The main objective is to produce technically trained personnel who understand the electronic aspects of communication, computer, computer network, and automated systems. These technicians will play a key role in many aspects of today’s highly technical environment.</p>
+
+          <!-- <p><strong>Programme Objectives (POs)</strong><br>
+            <strong>PEO 1:</strong> To produce graduates who can utilize state-of-the-art knowledge, suitable methodologies and scientific approaches in requirements analysis, design, evaluation, implementation, maintenance and evolution of high quality software systems.<br>
+            <strong>PEO 2:</strong> To produce graduates who are capable of undertaking analysis, research and development in the field of software engineering and software-related technology.<br>
+            <strong>PEO 3:</strong> To produce graduates who are able to demonstrate consistent professional ethics with high integrity.</p> -->
+
+          <p class="text-center"><strong>Entry Requirements</strong></p><ul>
+            <li>SPM: at least 3 credits include Mathematics and Science related subject and a pass in English</li>
+            <li>SPMV: at least 3 credits include Mathematics and a Technical / Vocational subject and a pass in English</li>
+            <li>UEC: at least 3 Bs include Mathematics and one Science related subject</li>
+            <li>Recognized equivalent qualifications: Standard Minimum with CGPA 2.0 and above</li></ul>
+          <p class="text-center"><strong>Core Subjects</strong><br>
+          Introduction to Computing, C Programming, Technical Mathematics, Calculus I, Calculus II, Engineering Mathematics, Engineer and Society, Digital Techniques I, Digital Techniques II, Microprocessors, Physics I , Physics II, Electric Circuits I, Electric Circuits II, Electronics I, Electronics II, Project & Practice I, Project & Practice II, Software application & Simulations, PLCs, Control Systems, Introduction to Electromagnetics</p>
+          <p class="text-center"><strong>Course Duration</strong><br>2 years 4 months full-time course (Total credits required: 94 credits)</p>
+        </div>
+      </div>      
+    </div>   
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker social_med"></span> Skudai, Johor</p>
+      <p><span class="glyphicon glyphicon-phone social_med"></span> +607 5586605</p>
+      <p><span class="glyphicon glyphicon-envelope social_med"></span> feit@sc.edu.my</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number" type="number" required>
+        </div>
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="year_graduate" name="year_graduate" placeholder="Year of Graduate" type="number" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <input class="form-control" id="residential_area" name="residential_area" placeholder="Residential Area" type="text" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Write something here..." rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<div class="text-center">
+<img src="media/img/map.jpg" class="img-fluid" style="width:100%;">
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>
+  <a href="https://www.facebook.com/FEITSouthernUC/" target="_blank"><span class="fa fa-facebook fa-2x"></span></a>&nbsp;|&nbsp;
+  <!-- <a href=""><span class="fa fa-instagram"></span></a> -->
+  <a href="https://www.youtube.com/channel/UCNIdplceP7rm8nCmYGyBETQ" target="_blank"><span class="fa fa-youtube fa-2x"></span></a>&nbsp;|&nbsp;
+  <a href="https://api.whatsapp.com/send?phone=60172962522&amp;text=Hi I would like to know more about Southern UC.'s courses." target="_blank"><span class="fa fa-whatsapp fa-2x"></span></a>
+  <!-- <a href=""><span class="fa fa-twitter"></span></a> -->
+  <!-- <a href=""><span class="fa fa-linkedin"></span></a> -->
+  </p>
+  <p>
+    Copyright ©2020 All rights reserved | SUC FEIT
+  </p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
